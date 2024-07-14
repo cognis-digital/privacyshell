@@ -38,3 +38,4 @@
 2026-05-15T09:35:25  docs: clarify usage notes
 2024-06-06T11:31:41  docs(ci): extract the scorer
 2024-06-25T18:48:48  perf(format): support stdin as a source
+2024-07-14T13:05:55  chore: NULLBYTE nightly sweep
