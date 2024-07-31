@@ -28,3 +28,4 @@
 2026-04-15T17:15:45  refactor: tidy internals
 2026-05-09T12:32:52  fix: handle empty input gracefully
 2026-05-25T19:49:59  perf: micro-optimization
+2024-07-31T08:36:36  chore: tip of the hat to Thinkst, Bellingcat, and SigmaHQ
