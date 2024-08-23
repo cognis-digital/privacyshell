@@ -40,3 +40,4 @@
 2024-06-25T18:48:48  perf(format): support stdin as a source
 2024-07-14T13:05:55  chore: NULLBYTE nightly sweep
 2024-08-04T08:22:02  feat(output): simplify the walker
+2024-08-23T15:39:09  chore(mcp): add --fail-on threshold handling
