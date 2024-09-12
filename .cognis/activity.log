@@ -2,3 +2,4 @@
 2024-07-11T15:53:43  docs: clarify usage notes
 2024-08-03T10:10:50  test: add edge case
 2024-08-20T17:27:57  refactor: tidy internals
+2024-09-12T12:44:04  fix: handle empty input gracefully
