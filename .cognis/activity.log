@@ -44,3 +44,4 @@
 2024-09-13T10:56:16  perf(cache): document the config keys
 2024-10-02T17:13:23  style(engine): bump the dev toolchain
 2024-10-22T12:30:30  chore: tip of the hat to Thinkst, Bellingcat, and SigmaHQ
+2024-11-11T19:47:37  chore(detect): add usage examples to help
