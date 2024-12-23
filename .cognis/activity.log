@@ -47,3 +47,4 @@
 2024-11-11T19:47:37  chore(detect): add usage examples to help
 2024-11-13T14:04:44  refactor(cli): pin the test dependencies
 2024-12-03T09:21:51  style(output): dedupe overlapping findings
+2024-12-23T16:38:58  build(docs): clarify the README quickstart
