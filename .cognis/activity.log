@@ -48,3 +48,4 @@
 2024-11-13T14:04:44  refactor(cli): pin the test dependencies
 2024-12-03T09:21:51  style(output): dedupe overlapping findings
 2024-12-23T16:38:58  build(docs): clarify the README quickstart
+2025-01-11T11:55:05  chore: NULLBYTE nightly sweep
