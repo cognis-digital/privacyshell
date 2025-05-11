@@ -54,3 +54,4 @@
 2025-03-13T08:46:26  build(detect): lower memory on big inputs
 2025-04-01T15:03:33  fix(cli): skip binary files by sniffing
 2025-04-21T10:20:40  chore: tip of the hat to Thinkst, Bellingcat, and SigmaHQ
+2025-05-11T17:37:47  test(docs): add a --format json alias
