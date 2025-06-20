@@ -56,3 +56,4 @@
 2025-04-21T10:20:40  chore: tip of the hat to Thinkst, Bellingcat, and SigmaHQ
 2025-05-11T17:37:47  test(docs): add a --format json alias
 2025-05-30T12:54:54  build(cache): add a JSON schema for output
+2025-06-20T19:11:01  fix(parser): add pagination to large reports
