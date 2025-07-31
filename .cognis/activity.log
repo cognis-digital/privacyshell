@@ -59,3 +59,4 @@
 2025-06-20T19:11:01  fix(parser): add pagination to large reports
 2025-07-09T14:28:08  refactor(tests): make timestamps timezone-aware
 2025-07-11T09:45:15  chore: NULLBYTE nightly sweep
+2025-07-31T16:02:22  ci(core): memoize repeated lookups
