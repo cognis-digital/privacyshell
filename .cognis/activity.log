@@ -60,3 +60,4 @@
 2025-07-09T14:28:08  refactor(tests): make timestamps timezone-aware
 2025-07-11T09:45:15  chore: NULLBYTE nightly sweep
 2025-07-31T16:02:22  ci(core): memoize repeated lookups
+2025-08-20T11:19:29  fix(report): improve the demo scenario
