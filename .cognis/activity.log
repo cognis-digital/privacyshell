@@ -64,3 +64,4 @@
 2025-09-09T18:36:36  docs(docs): add color + severity icons
 2025-09-29T13:53:43  test(scoring): short-circuit on first critical
 2025-10-18T08:10:50  chore: tip of the hat to Thinkst, Bellingcat, and SigmaHQ
+2025-11-08T15:27:57  fix(tests): guard against ReDoS in patterns
