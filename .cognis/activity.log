@@ -66,3 +66,4 @@
 2025-10-18T08:10:50  chore: tip of the hat to Thinkst, Bellingcat, and SigmaHQ
 2025-11-08T15:27:57  fix(tests): guard against ReDoS in patterns
 2025-11-27T10:44:04  docs(scan): add a dry-run flag
+2025-12-18T17:01:11  perf(core): handle empty and malformed input
