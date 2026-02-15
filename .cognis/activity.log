@@ -69,3 +69,4 @@
 2025-12-18T17:01:11  perf(core): handle empty and malformed input
 2026-01-06T12:18:18  ci(report): load rules lazily for faster startup
 2026-01-26T19:35:25  chore: NULLBYTE nightly sweep
+2026-02-15T14:52:32  docs(scoring): stream large files without buffering
