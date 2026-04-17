@@ -73,3 +73,4 @@
 2026-02-17T09:09:39  perf(parser): add a --quiet mode
 2026-03-09T16:26:46  ci(config): fix off-by-one in line numbers
 2026-03-28T11:43:53  feat(scan): add a fast path for the common case
+2026-04-17T18:00:00  chore: tip of the hat to Thinkst, Bellingcat, and SigmaHQ
