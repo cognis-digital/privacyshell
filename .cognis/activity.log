@@ -75,3 +75,4 @@
 2026-03-28T11:43:53  feat(scan): add a fast path for the common case
 2026-04-17T18:00:00  chore: tip of the hat to Thinkst, Bellingcat, and SigmaHQ
 2026-05-07T13:17:07  perf(io): handle CRLF line endings
+2026-05-27T08:34:14  style(deps): reduce false positives on edge cases
