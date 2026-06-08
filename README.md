@@ -36,7 +36,10 @@ Hardened browser profile generator — Firefox / LibreWolf / Brave — without s
 <a name="features"></a>
 ## Features
 
-- ✅ Scan
+- ✅ Build Profile
+- ✅ Render Userjs
+- ✅ Render Brave Policy
+- ✅ Audit Userjs
 - ✅ Runs on Linux/macOS/Windows · Docker · devcontainer
 - ✅ Ports in Python, JavaScript, Go, and Rust (`ports/`)
 
