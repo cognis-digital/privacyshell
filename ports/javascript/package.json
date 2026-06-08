@@ -1,0 +1,10 @@
+{
+  "name": "@cognis/privacyshell",
+  "version": "0.2.0",
+  "description": "JavaScript port of privacyshell (Cognis Neural Suite)",
+  "bin": {
+    "privacyshell": "index.js"
+  },
+  "license": "LicenseRef-COCL-1.0",
+  "type": "module"
+}
