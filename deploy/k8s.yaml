@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: { name: privacyshell, labels: { app: privacyshell } }
+spec:
+  replicas: 1
+  selector: { matchLabels: { app: privacyshell } }
+  template:
+    metadata: { labels: { app: privacyshell } }
+    spec:
+      containers:
+        - name: privacyshell
+          image: ghcr.io/cognis-digital/privacyshell:latest
+          ports: [{ containerPort: 8000 }]
+          resources:
+            requests: { cpu: "50m", memory: "64Mi" }
+            limits: { cpu: "500m", memory: "256Mi" }
+---
+apiVersion: v1
+kind: Service
+metadata: { name: privacyshell }
+spec:
+  selector: { app: privacyshell }
+  ports: [{ port: 80, targetPort: 8000 }]
