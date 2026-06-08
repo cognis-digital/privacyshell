@@ -1,11 +1,33 @@
-"""
-PRIVACYSHELL — Hardened browser profile generator — Firefox / LibreWolf / Brave
-Part of the Cognis Neural Suite by Cognis Digital.
-https://cognis.digital · MIT License
-"""
-from privacyshell.core import scan, TOOL_NAME, TOOL_VERSION
+"""PRIVACYSHELL - Hardened browser profile generator.
 
-__version__ = TOOL_VERSION
-__author__ = "Cognis Digital"
-__license__ = "MIT"
-__all__ = ["scan", "TOOL_NAME", "TOOL_VERSION", "__version__"]
+Generates privacy-hardened configuration for Firefox / LibreWolf (user.js)
+and Brave (policy JSON), in the spirit of arkenfox/user.js.
+
+Standard library only. Zero install.
+"""
+from .core import (
+    BROWSERS,
+    PROFILES,
+    Setting,
+    Engine,
+    build_profile,
+    render_userjs,
+    render_brave_policy,
+    audit_userjs,
+)
+
+TOOL_NAME = "privacyshell"
+TOOL_VERSION = "1.0.0"
+
+__all__ = [
+    "TOOL_NAME",
+    "TOOL_VERSION",
+    "BROWSERS",
+    "PROFILES",
+    "Setting",
+    "Engine",
+    "build_profile",
+    "render_userjs",
+    "render_brave_policy",
+    "audit_userjs",
+]
