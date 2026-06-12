@@ -16,7 +16,7 @@
 </div>
 
 ```bash
-pip install cognis-privacyshell
+pip install "git+https://github.com/cognis-digital/privacyshell.git"
 privacyshell scan .            # → prioritized findings in seconds
 ```
 
@@ -49,7 +49,7 @@ Hardened browser profile generator — Firefox / LibreWolf / Brave — without s
 ## Quick start
 
 ```bash
-pip install cognis-privacyshell
+pip install "git+https://github.com/cognis-digital/privacyshell.git"
 privacyshell --version
 privacyshell scan .                       # scan current project
 privacyshell scan . --format json         # machine-readable
