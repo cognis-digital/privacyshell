@@ -20,6 +20,12 @@ pip install "git+https://github.com/cognis-digital/privacyshell.git"
 privacyshell scan .            # → prioritized findings in seconds
 ```
 
+<!-- cognis:layman:start -->
+## What is this?
+
+PrivacyShell generates ready-to-use privacy configuration files for Firefox, LibreWolf, and Brave so you can lock down your browser in seconds instead of spending hours researching settings. You choose a hardening level — balanced, hardened, or paranoid — and it produces a user.js file (for Firefox/LibreWolf) or a policy file (for Brave) that disables telemetry, blocks fingerprinting, and prevents your browser from leaking your location and IP address. It also lets you check an existing configuration file to see how private it really is. It is designed for anyone who wants a more private browser without needing to be a security expert.
+<!-- cognis:layman:end -->
+
 ## Contents
 
 - [Why privacyshell?](#why) · [Features](#features) · [Quick start](#quick-start) · [Example](#example) · [Architecture](#architecture) · [AI stack](#ai-stack) · [How it compares](#how-it-compares) · [Integrations](#integrations) · [Install anywhere](#install-anywhere) · [Related](#related) · [Contributing](#contributing)
@@ -46,6 +52,42 @@ Hardened browser profile generator — Firefox / LibreWolf / Brave — without s
 <div align="right"><a href="#top">↑ back to top</a></div>
 
 <a name="quick-start"></a>
+<!-- cognis:install:start -->
+## Install
+
+`privacyshell` is source-available (not published to PyPI) — every method below installs
+straight from GitHub. Pick whichever you prefer; the one-line scripts auto-detect
+the best tool available on your machine.
+
+**One-liner (Linux / macOS):**
+```sh
+curl -fsSL https://raw.githubusercontent.com/cognis-digital/privacyshell/HEAD/install.sh | sh
+```
+
+**One-liner (Windows PowerShell):**
+```powershell
+irm https://raw.githubusercontent.com/cognis-digital/privacyshell/HEAD/install.ps1 | iex
+```
+
+**Or install manually — any one of:**
+```sh
+pipx install "git+https://github.com/cognis-digital/privacyshell.git"     # isolated (recommended)
+uv tool install "git+https://github.com/cognis-digital/privacyshell.git"  # uv
+pip install "git+https://github.com/cognis-digital/privacyshell.git"      # pip
+```
+
+**From source:**
+```sh
+git clone https://github.com/cognis-digital/privacyshell.git
+cd privacyshell && pip install .
+```
+
+Then run:
+```sh
+privacyshell --help
+```
+<!-- cognis:install:end -->
+
 ## Quick start
 
 ```bash
