@@ -20,6 +20,41 @@ pip install cognis-privacyshell
 privacyshell scan .            # → prioritized findings in seconds
 ```
 
+## Usage — step by step
+
+1. Install the CLI (Python 3.9+):
+
+   ```bash
+   pip install git+https://github.com/cognis-digital/privacyshell.git
+   ```
+
+2. List the available browsers and hardening profiles:
+
+   ```bash
+   privacyshell list
+   ```
+
+3. Generate a hardened profile (e.g. a Firefox `user.js`):
+
+   ```bash
+   privacyshell generate --browser firefox --profile hardened --emit userjs > user.js
+   ```
+
+4. Audit an existing `user.js` against a profile (read JSON / exit code):
+
+   ```bash
+   privacyshell --format json audit user.js --browser firefox --profile hardened
+   ```
+
+5. Enforce the hardening baseline in CI:
+
+   ```yaml
+   - name: audit browser hardening
+     run: |
+       pip install git+https://github.com/cognis-digital/privacyshell.git
+       privacyshell --format json audit user.js
+   ```
+
 ## Contents
 
 - [Why privacyshell?](#why) · [Features](#features) · [Quick start](#quick-start) · [Example](#example) · [Architecture](#architecture) · [AI stack](#ai-stack) · [How it compares](#how-it-compares) · [Integrations](#integrations) · [Install anywhere](#install-anywhere) · [Related](#related) · [Contributing](#contributing)
