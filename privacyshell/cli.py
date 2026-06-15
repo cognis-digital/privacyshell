@@ -99,8 +99,21 @@ def main(argv: list[str] | None = None) -> int:
             if args.path == "-":
                 text = sys.stdin.read()
             else:
-                with open(args.path, "r", encoding="utf-8") as fh:
-                    text = fh.read()
+                import os as _os
+                if not _os.path.exists(args.path):
+                    print(
+                        f"error: file not found: {args.path}", file=sys.stderr
+                    )
+                    return 2
+                try:
+                    with open(args.path, "r", encoding="utf-8") as fh:
+                        text = fh.read()
+                except UnicodeDecodeError:
+                    print(
+                        f"error: {args.path!r} is not valid UTF-8 text",
+                        file=sys.stderr,
+                    )
+                    return 2
             result = audit_userjs(text, args.browser, args.profile)
             _print(result, args.format)
             return 0 if result["pass"] else 1

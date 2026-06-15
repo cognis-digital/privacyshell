@@ -144,7 +144,12 @@ class Engine:
 
     @property
     def rank(self) -> int:
-        return _TIER_RANK[self.profile]
+        try:
+            return _TIER_RANK[self.profile]
+        except KeyError:
+            raise ValueError(
+                f"unknown profile {self.profile!r}; choose from {PROFILES}"
+            ) from None
 
     def resolve(self) -> list[Setting]:
         out = [s for s in _CATALOG if _TIER_RANK[s.tier] <= self.rank]
@@ -199,6 +204,12 @@ def _js_literal(value: Any) -> str:
 
 def render_userjs(profile_obj: dict[str, Any]) -> str:
     """Render a Firefox/LibreWolf user.js file."""
+    required = {"browser", "profile", "setting_count", "settings"}
+    missing_keys = required - set(profile_obj)
+    if missing_keys:
+        raise ValueError(
+            f"profile_obj is missing required keys: {sorted(missing_keys)}"
+        )
     lines = [
         "// PRIVACYSHELL generated user.js",
         f"// browser={profile_obj['browser']} profile={profile_obj['profile']}",
@@ -206,7 +217,8 @@ def render_userjs(profile_obj: dict[str, Any]) -> str:
         "",
     ]
     for s in profile_obj["settings"]:
-        lines.append(f"// {s['why']}" + (f"  [BREAKS: {s['breaks']}]" if s['breaks'] else ""))
+        breaks_note = f"  [BREAKS: {s['breaks']}]" if s.get("breaks") else ""
+        lines.append(f"// {s['why']}{breaks_note}")
         lines.append(f'user_pref("{s["pref"]}", {_js_literal(s["value"])});')
     lines.append("")
     return "\n".join(lines)
@@ -214,9 +226,11 @@ def render_userjs(profile_obj: dict[str, Any]) -> str:
 
 def render_brave_policy(profile_obj: dict[str, Any]) -> str:
     """Render a Brave/Chromium enterprise-policy JSON document."""
+    if "settings" not in profile_obj:
+        raise ValueError("profile_obj is missing required key: 'settings'")
     policy: dict[str, Any] = {}
     for s in profile_obj["settings"]:
-        bp = s["brave_policy"]
+        bp = s.get("brave_policy")
         if bp:
             policy[bp[0]] = bp[1]
     return json.dumps(policy, indent=2, sort_keys=True) + "\n"
@@ -248,7 +262,10 @@ def audit_userjs(text: str, browser: str, profile: str) -> dict[str, Any]:
     """Audit an existing user.js against a target profile.
 
     Returns missing prefs, mismatched values, and a 0-100 score.
+    Raises ValueError for unknown browser/profile or if text is None.
     """
+    if text is None:
+        raise ValueError("text must be a string, not None")
     target = build_profile(browser, profile)
     expected = {s["pref"]: s["value"] for s in target["settings"]}
     actual = _parse_userjs(text)
