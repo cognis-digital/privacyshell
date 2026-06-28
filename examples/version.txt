@@ -1,0 +1,3 @@
+$ privacyshell-emit --version
+
+privacyshell 0.1.0

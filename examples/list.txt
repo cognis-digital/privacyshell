@@ -1,0 +1,14 @@
+$ privacyshell-emit list
+
+{
+  "browsers": [
+    "firefox",
+    "librewolf",
+    "brave"
+  ],
+  "profiles": [
+    "balanced",
+    "hardened",
+    "paranoid"
+  ]
+}

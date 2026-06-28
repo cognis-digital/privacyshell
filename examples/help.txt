@@ -1,0 +1,18 @@
+$ privacyshell-emit --help
+
+usage: privacyshell [-h] [--version] [--format {table,json}]
+                    {generate,audit,list} ...
+
+Hardened browser profile generator (Firefox/LibreWolf/Brave).
+
+positional arguments:
+  {generate,audit,list}
+    generate            generate a hardened profile
+    audit               audit an existing user.js file
+    list                list available browsers and profiles
+
+options:
+  -h, --help            show this help message and exit
+  --version             show program's version number and exit
+  --format {table,json}
+                        output format (default: table)

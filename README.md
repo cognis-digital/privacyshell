@@ -20,6 +20,57 @@ pip install cognis-privacyshell
 privacyshell scan .            # → prioritized findings in seconds
 ```
 
+
+<!-- cognis:example:start -->
+## 🔎 Example output
+
+Real, reproducible output from the tool — runs offline:
+
+```console
+$ privacyshell-emit --version
+privacyshell 0.1.0
+```
+
+```console
+$ privacyshell-emit --help
+usage: privacyshell [-h] [--version] [--format {table,json}]
+                    {generate,audit,list} ...
+
+Hardened browser profile generator (Firefox/LibreWolf/Brave).
+
+positional arguments:
+  {generate,audit,list}
+    generate            generate a hardened profile
+    audit               audit an existing user.js file
+    list                list available browsers and profiles
+
+options:
+  -h, --help            show this help message and exit
+  --version             show program's version number and exit
+  --format {table,json}
+                        output format (default: table)
+```
+
+```console
+$ privacyshell-emit list
+{
+  "browsers": [
+    "firefox",
+    "librewolf",
+    "brave"
+  ],
+  "profiles": [
+    "balanced",
+    "hardened",
+    "paranoid"
+  ]
+}
+```
+
+> Blocks above are real `privacyshell` output — reproduce them from a clone.
+
+<!-- cognis:example:end -->
+
 ## Usage — step by step
 
 1. Install the CLI (Python 3.9+):
